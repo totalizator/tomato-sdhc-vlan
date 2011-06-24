@@ -25,3 +25,6 @@ LinksysInfo - Community Forums for Linksys and Cisco Devices - Firmware Projects
 
 Common Tomato Topics at LinksysInfo Community Forums
  * http://www.linksysinfo.org/forums/showthread.php?t=63486
+
+GIT repo
+ * http://repo.or.cz/w/tomato.git
