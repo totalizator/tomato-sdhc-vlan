@@ -1,0 +1,61 @@
+Not exactly a 'proper' changelog - but close - this is a raw/partial copy of 'git log' on my local repo:
+
+commit a27d2bf7d91eb9de2be7926272cdc919f78f2b0b
+Author: Augusto Bott <augusto@bott.com.br>
+Date:   Fri Jun 24 03:05:55 2011 -0300
+
+ * New CPU frequency detection, flash size (status-overview) and updates on various GUI pages (mostly, adding notes and navigation menu layout).
+
+commit 1a3deeb707d732921a68bc964467539aa9d460ad
+Author: Augusto Bott <augusto@bott.com.br>
+Date:   Wed Jun 22 07:55:37 2011 -0300
+
+ * Corrected a bug on advanced-vlan.asp introduced on the previous commit, which was preventing the form from submitting (related to experimental settings/trunk_vlan_support_override).
+
+commit c7cb00279fae2f215f10920ab32722deb3f35a62
+Author: Augusto Bott <augusto@bott.com.br>
+Date:   Wed Jun 22 03:50:39 2011 -0300
+
+ * Minor change due to how BASH was (mis)interpreting dot (aka source) on recent versions of Ubuntu
+
+commit 323c66296ef51b87e23904b1968995f79955c0f0
+Author: Augusto Bott <augusto@bott.com.br>
+Date:   Mon Jun 20 03:15:42 2011 -0300
+
+ * Instead of checking against boardtype, VLAN support for a particular router model is now checked against boardflags (BFL_ENETVLAN, 0x0100). Trunk-based VLAN support is still checked against boardtype, but the GUI now has a checkbox available to allow overriding this check (for experimental purposes, perhaps). Physical port-ordering checks against a few additional boardtypes: WRT54GL 1.x, WL-520GU, WL-500G Premium v2, WRT54GS 2.x, WRT320N/E2000, WRT610Nv2/E3000 (not thoroughly tested). As internal switch-port-number can be different according to each router model (5 on FastE, 8 on GigE), it's now 'detected' while reading configuration from NVRAM (also not thoroughly tested, but all information found so far suggests it should work across all of them).
+
+commit 258a7b26e75b699413f83104b7ee560d8745fc3b
+Author: Augusto Bott <augusto@bott.com.br>
+Date:   Fri Jun 10 07:41:05 2011 -0300
+
+ * Minor adjustments (cosmetics/CSS, web page names)
+
+commit fd5454d67958f6ba9836c01e7b490e2162df522a
+Author: Augusto Bott <augusto@bott.com.br>
+Date:   Fri Jun 10 07:00:52 2011 -0300
+
+ * Added 'previous WAN IP' and ISP concentrator ID from TomatoRAF (Victek)
+
+commit da9663a1dd7fb549b3839f65bfc6145cf31a9b38
+Author: Augusto Bott <augusto@bott.com.br>
+Date:   Fri Jun 10 06:50:33 2011 -0300
+
+ * Correction of two minor typos regarding clkfreq (CPU frequency)
+
+commit b5cd4981d0cf8fb5af69bd27e22a663920efed22
+Author: Augusto Bott <augusto@bott.com.br>
+Date:   Fri Jun 10 06:34:43 2011 -0300
+
+ * Added IP/range BW limiter, ARP binding, CPU frequency selection from TomatoRAF (Victek)
+
+commit 91fddd44dd7c6383bc932d352ad05629adc98592
+Author: Augusto Bott <augusto@bott.com.br>
+Date:   Fri Jun 10 03:41:26 2011 -0300
+
+ * Changed TCP/UDP timeouts for high P2P load (i.e. Tomato RAF), patched Speedmod, enabled selecting PFIFO (instead of only SFQ for tc) see also http://touristinparadise.blogspot.com/2008/04/linksys-wrt54gl-routers-improving.html
+
+commit 544c077367fe36afec7b961d6cfa5b9908f4ac0e
+Author: Augusto Bott <augusto@bott.com.br>
+Date:   Tue May 3 23:13:00 2011 -0300
+
+ * First VLAN GUI version. Tested on WRT54GL v1.1 and WRT54G v2
