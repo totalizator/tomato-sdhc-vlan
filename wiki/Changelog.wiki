@@ -1,3 +1,4 @@
+#labels Featured
 Not exactly a 'proper' changelog - but close - this is a raw/partial copy of 'git log' on my local repo:
 
 commit a27d2bf7d91eb9de2be7926272cdc919f78f2b0b
