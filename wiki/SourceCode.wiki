@@ -1,0 +1,11 @@
+#labels Featured
+= Introduction =
+
+There is a GIT repository at http://repo.or.cz/w/tomato.git which hosts a number of Tomato mods.
+
+= Details =
+
+The latest code for the VLAN GUI can be currently be found here:
+http://repo.or.cz/w/tomato.git/shortlog/refs/heads/VLAN-GUI
+
+The latest code I've been using on my routers (aka tomato-sdhc-vlan) can be still found on this site (diffs on the [http://code.google.com/p/tomato-sdhc-vlan/downloads/list Downloads] section). I've been working with other developers to sort a few things on the GIT repository and as soon as possible, the code for tomato-sdhc-vlan, most likely, will be made available there as well.
