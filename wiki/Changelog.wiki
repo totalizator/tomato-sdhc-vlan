@@ -1,4 +1,40 @@
 #labels Featured
+= Changelog =
+
+Here's a short/brief list of features currently implemented/available on branch VLAN-GUI v8 as of today (2011-07-29):
+
+ * up to 4 LAN bridges can be set up via web interface
+ * each LAN bridge must have it's own IP address/netmask set
+ * DHCP server can be enabled/configured independently for/on each LAN bridge (i.e. different IP ranges, lease times)
+ * Spanning Tree Protocol can be enabled/disabled on each bridge individually
+ * WLAN can be assigned to be part of any existing/configured LAN bridge, not just the primary LAN (br0)
+ * when/if enabled, the web management interface on the router should be accessible from/on all LAN bridges
+ * up to 16 VLANs can be created/configured on the device (with VIDs ranging from 0 to 15)
+ * each VLAN can be configured/treated as: WAN, part of a LAN bridge or unassigned
+ * in general, each individual/physical ethernet port on the device can be assigned as a member/participant of a single VLAN
+ * on devices (known) to support tagging of ethernet frames, it's possible to configure one (physical) ethernet port as a 802.1q trunk (member of multiple VLANs)
+ * static routes can be added/configured onto specific LAN bridges
+ * MiniuPnPd, RIP and IGMPproxy can be configured to listen/bind only on selected/enabled interfaces
+ * LAN bridges are isolated from each other by default (not accessible to each other)
+ * access/communication between different LAN bridges can be configured via web interface
+ * code based on TomatoUSB 1.28.8754
+And there's also a (non-exhaustive) list of known issues, limitations and warnings (aka things you show consider/know about VLAN-GUI before trying it out):
+
+ * as bridge br0 is supposed to be the 'primary' LAN interface, it cannot be deleted and must always have a IP valid address set
+ * if a default gateway is set, it must be reachable via br0 (being the primary LAN interface)
+ * each LAN bridge must have it's own IP address/netmask set (if a LAN bridge is created and a proper IP address/netmask pair is not set or... if two different LAN bridges are configured with similar/conflicting IP addresses and/or overlapping subnets, the outcome/results can be unpredictable)
+ * although it's possible to create/configure up to 16 VLANs on devices like the WRT54GL (and possibly even more VLANs on other devices), it's usually a good idea to avoid using VID 0 to prevent 802.1q compatibility issues (as 802.1q specifies that frames tagged with VID 0 do not belong to any VLAN).
+ * since a lot of code in Tomato assumes there's only one bridge/LAN (br0), we can probably/safely assume that any functionality/feature not mentioned above should be, most likely, restricted to work/function only on/with br0 (i.e. WDS/hotplugging, ondemand PPP dialing, OpenVPN-related things, etc...)
+ * ipv6 support is uncertain to say the least (absolutely no testing has been done so far) 
+
+Tested partially/only tested on these models:
+ * WRT54GL v1.x , WRT54G v2 
+ * RT-N16, E3000
+ * Netgear WNR3500L
+
+
+= Old Version = 
+
 Not exactly a 'proper' changelog - but close - this is a raw/partial copy of 'git log' on my local repo:
 
 commit a27d2bf7d91eb9de2be7926272cdc919f78f2b0b
