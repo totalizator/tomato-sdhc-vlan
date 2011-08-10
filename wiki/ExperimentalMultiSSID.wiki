@@ -126,3 +126,4 @@ Some references:
  * http://www.pennock.nl/dd-wrt/Multiple_BSSIDs.html
  * http://wiki.openwrt.org/oldwiki/wireless.nas
  * http://www.bingner.com/openwrt/wpa.html
+ * http://repo.or.cz/w/tomato.git/shortlog/refs/heads/VLAN-MultiSSID
