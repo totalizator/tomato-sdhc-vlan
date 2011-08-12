@@ -117,13 +117,30 @@ Once you're done changing settings, you should save/commit nvram (so they will b
 nvram commit
 }}}
 
-Some references:
+= ANOTHER WARNING =
+
+Sometimes I can't connect to the additional/guest SSID right after rebooting my WRT54GL (seems to be related having more than one wireless interface configured to use WPA). Currently, the only workaround is to connect via telnet/SSH to my router and restart networking services:
+{{{
+service net restart
+}}}
+
+Keep in mind this is a work in progress and... have fun!
+
+
+=== Some references: ===
 
  * http://tomatousb.org/forum/t-264199/multiple-ssid#post-1223051
+
  * http://linksysinfo.org/index.php?threads/vlan-tags-work-for-you.34478/page-3#post-171060
+
  * http://linksysinfo.org/index.php?threads/can-we-disable-linksys-e3000-guest-wireless-yet.35184/#post-171434
+
  * http://www.dd-wrt.com/phpBB2/viewtopic.php?t=16652
+
  * http://www.pennock.nl/dd-wrt/Multiple_BSSIDs.html
+
  * http://wiki.openwrt.org/oldwiki/wireless.nas
+
  * http://www.bingner.com/openwrt/wpa.html
+
  * http://repo.or.cz/w/tomato.git/shortlog/refs/heads/VLAN-MultiSSID
