@@ -126,6 +126,9 @@ service net restart
 
 Keep in mind this is a work in progress and... have fun!
 
+=== Possibly relevant for K26 builds ===
+
+ * http://www.linksysinfo.org/index.php?threads/vlan-tags-work-for-you.34478/page-5#post-171805
 
 === Some references: ===
 
