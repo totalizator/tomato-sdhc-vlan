@@ -1,0 +1,3 @@
+#labels Featured
+= SDHC/MMC Admin page =
+[http://tomato-sdhc-vlan.googlecode.com/files/Admin_SDHC-MMC.png]
