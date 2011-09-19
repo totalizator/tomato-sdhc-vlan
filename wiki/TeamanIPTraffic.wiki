@@ -1,6 +1,12 @@
 #labels Featured
 = Teaman-IPTraffic =
 
+== Credits & Acknowledgements ==
+
+ * [http://code.google.com/p/ipt-account ipt_account], by Piotr Gasidlo.
+
+ * cstats is based on [http://www.polarcloud.com/tomato rstats], by Jon Zarate.
+
 == IP Traffic: Real-Time ==
 [http://tomato-sdhc-vlan.googlecode.com/files/IP_Traffic_Real_Time_Client_Monitor.png]
 
