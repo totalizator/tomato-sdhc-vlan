@@ -1,3 +1,9 @@
 #labels Featured
-= SDHC/MMC Admin page =
+= SDHC/MMC card support on WRT54GL routers with SD/SDHC/MMC mod =
+
+== Credits & Acknowledgements ==
+
+ * [http://gemini.net.pl/~slodki/tomato-sdhc.html tomato-slodki], by Tomasz Słodkowicz
+
+== SDHC Admin page on a WRT54GL ==
 [http://tomato-sdhc-vlan.googlecode.com/files/Admin_SDHC-MMC.png]
