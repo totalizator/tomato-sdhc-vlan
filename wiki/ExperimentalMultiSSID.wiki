@@ -147,3 +147,7 @@ Keep in mind this is a work in progress and... have fun!
  * http://www.bingner.com/openwrt/wpa.html
 
  * http://repo.or.cz/w/tomato.git/shortlog/refs/heads/VLAN-MultiSSID
+
+= See Also =
+
+ * http://tomatousb.org/forum/t-264199/multiple-ssid#post-1307230
