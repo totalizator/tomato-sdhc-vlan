@@ -1,11 +1,19 @@
 #labels Featured
+<wiki:toc max_depth="4"/>
+
+------
+
 = Multiple SSIDs =
 
 Notes on experimental/initial support of multiple SSIDs (guest wireless, no GUI support at this moment).
 
-= WARNING =
+== WARNING ==
 
 This whole thing is HIGHLY experimental and most likely, quite buggy. These instructions have only been tested on a WRT54GL v1.1, so proceed at your own risk. 
+
+------
+
+= Setup =
 
 == STEP 0 ==
 
@@ -31,7 +39,9 @@ Once your device finishes rebooting and is back online, head on again to the sam
 
 Since we don't have a GUI just yet, open a telnet/SSH session to your router and get ready to configure your guest WLAN :-)
 
-== WLAN Settings ==
+------
+
+= WLAN Settings =
 
 Consider the following example/scenario:
 
@@ -117,7 +127,7 @@ Once you're done changing settings, you should save/commit nvram (so they will b
 nvram commit
 }}}
 
-= ANOTHER WARNING =
+== ANOTHER WARNING ==
 
 Sometimes I can't connect to the additional/guest SSID right after rebooting my WRT54GL (seems to be related having more than one wireless interface configured to use WPA). Currently, the only workaround is to connect via telnet/SSH to my router and restart networking services:
 {{{
@@ -125,6 +135,10 @@ service net restart
 }}}
 
 Keep in mind this is a work in progress and... have fun!
+
+------
+
+= See Also =
 
 === Possibly relevant for K26 builds ===
 
@@ -148,6 +162,29 @@ Keep in mind this is a work in progress and... have fun!
 
  * http://repo.or.cz/w/tomato.git/shortlog/refs/heads/VLAN-MultiSSID
 
-= See Also =
+= WPAx not working on guest/virtual WLAN =
 
  * http://tomatousb.org/forum/t-264199/multiple-ssid#post-1307230
+
+In brief: double-check _all_ your settings related to MAC addresses (on each/every interface). As an example, here's how to check your current/runtime settings for a virtual interface named 'wl0.1':
+
+{{{
+ifconfig wl0.1
+wl -i wl0.1 bssid
+}}}
+
+If 'ifconfig' reports a different MAC address for your suspicious/problematic wireless interface, you can try setting it to the same value reported by the 'wl' command (and restart the 'nas' daemon right after that):
+
+{{{
+ifconfig wl0.1 down
+ifconfig wl0.1 hw ether xx:xx:xx:xx:xx:xx
+ifconfig wl0.1 up
+}}}
+
+Also, there's something else you could try (but you probably want to take a backup before running this next command on your router):
+
+{{{
+nvram unset wl0.1_hwaddr
+nvram commit
+reboot
+}}}
