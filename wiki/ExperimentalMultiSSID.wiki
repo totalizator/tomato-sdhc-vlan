@@ -62,8 +62,10 @@ nvram set wl0.1_bss_enabled='1'      # this BSSID should be enabled
 nvram set wl0.1_ssid='guest'         # the SSID of this network
 nvram set wl0.1_closed='0'           # broadcast SSID
 nvram set wl0.1_mode='ap'            # access point mode
+nvram set wl0.1_radio='on'           # see NOTE below
 nvram set lan1_ifnames='vlan3 wl0.1' # interfaces bridged to LAN1/br1
 }}}
+NOTE: http://tomatousb.org/forum/t-264199/multiple-ssid#post-1313099
 
 Then, we need to restart the network subsystem on the router:
 {{{
