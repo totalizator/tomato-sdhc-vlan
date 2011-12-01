@@ -62,7 +62,7 @@ nvram set wl0.1_bss_enabled='1'      # this BSSID should be enabled
 nvram set wl0.1_ssid='guest'         # the SSID of this network
 nvram set wl0.1_closed='0'           # broadcast SSID
 nvram set wl0.1_mode='ap'            # access point mode
-nvram set wl0.1_radio='on'           # see NOTE below
+nvram set wl0.1_radio='1'            # see NOTE below
 nvram set lan1_ifnames='vlan3 wl0.1' # interfaces bridged to LAN1/br1
 }}}
 NOTE: http://tomatousb.org/forum/t-264199/multiple-ssid#post-1313099
@@ -80,6 +80,7 @@ And after a few moments... you'll have your 'guest' wireless network up and runn
 {{{
 nvram set wl0_vifs='wl0.1'
 nvram set wl0.1_bss_enabled='1'
+nvram set wl0.1_radio='1'
 nvram set wl0.1_security_mode='wep'
 nvram set wl0.1_wep='enabled'
 nvram set wl0.1_wep_bit='128'
@@ -104,6 +105,7 @@ nvram set wl0_vifs='wl0.1'
 nvram set wl0.1_ssid='guest'
 nvram set wl0.1_wpa_psk='supersecret'
 nvram set wl0.1_bss_enabled='1'
+nvram set wl0.1_radio='1'
 nvram set wl0.1_mode='ap'
 nvram set wl0.1_ifname='wl0.1'
 nvram set wl0.1_security_mode='wpa2_personal'
@@ -123,6 +125,8 @@ nvram set nas_alternate='1'
 }}}
 
 When this nvram variable is set, an alternative method will be used to start as many instances of the "nas" service as needed (nas is the proprietary binary tool that sets up dynamic encryption on the wireless device).
+
+Also, please notice this variable is only relevant on K24 builds (and silently ignored on K26 builds - see section "Possibly relevant for K26 builds", below).
 
 Once you're done changing settings, you should save/commit nvram (so they will be 'remembered' by the router across reboots/restarts):
 {{{
