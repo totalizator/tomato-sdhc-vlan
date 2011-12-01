@@ -1,5 +1,32 @@
 #labels Featured
-= Changelog =
+= Changelog = 
+
+http://repo.or.cz/w/tomato.git/shortlog/refs/tags/Teaman-ND-1.28.0013-SDHC
+
+  * VLAN-GUI: Added "Route Modem IP" option (from Tomato/MLPPP)
+  * VLAN-GUI: Fix compilation error when building without VLAN-GUI enabled
+  * IPTraffic: fix sortCompare functions (column sorting)
+
+http://repo.or.cz/w/tomato.git/shortlog/refs/tags/Teaman-ND-1.28.0012-SDHC
+
+  * VLAN-GUI: include WHR-G54S port mapping
+  * Added Udpxy v1.0-Chipmunk-build21 (alternative to igmpproxy/multicast)
+  * Dnsmasq 2.59 update
+  * dropbear 0.54 update
+
+http://repo.or.cz/w/tomato.git/shortlog/refs/tags/Teaman-ND-1.28.0011-SDHC
+
+  * Fix default MAC address calculation of virtual WL ifaces
+  * Fix handling of DHCP IP ranges for big LAN subnets
+  * Added CPU % usage to Status Overview page
+
+http://repo.or.cz/w/tomato.git/shortlog/refs/tags/Teaman-ND-1.28.0010-SDHC
+  * (...)
+
+
+------
+
+== Changelog (deprecated) ==
 
 Here's a short/brief list of features currently implemented/available on branch VLAN-GUI v8 as of today (2011-07-29):
 
