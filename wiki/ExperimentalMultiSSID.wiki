@@ -1,9 +1,8 @@
-#labels Featured
 <wiki:toc max_depth="4"/>
 
 ------
 
-= Multiple SSIDs =
+= Multiple SSIDs (kept for reference) =
 
 Notes on experimental/initial support of multiple SSIDs (guest wireless, no GUI support at this moment).
 
