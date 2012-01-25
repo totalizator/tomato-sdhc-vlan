@@ -1,5 +1,58 @@
 #labels Featured
+<wiki:toc max_depth="4"/>
+
+
+------
+
+
 = Changelog = 
+
+http://repo.or.cz/w/tomato.git/shortlog/refs/tags/Teaman-RT-1.28.2019
+
+  * For K26 builds and MIPSR2 routers (i.e. E3000)
+  * Same updates as of Teaman-ND-1.28.0019-SDHC
+  * Code merged with Toastman-1.28.7494.1 (http://repo.or.cz/w/tomato.git/shortlog/refs/tags/Toastman-1.28.7494.1)
+
+
+http://repo.or.cz/w/tomato.git/shortlog/refs/tags/Teaman-ND-1.28.0019-SDHC
+
+  * EXPERIMENTAL Web UI for multiple virtual/guest WLANs (v2)
+  * IGMPProxy: ignore non-primary addresses on upstream VIF (prevents issues when "Route Modem IP" is enabled and WAN is set to DHCP)
+  * UDPxy: fixed symlink for udpxrec
+  * Add route modem IP option when WAN is set to "Static IP"
+
+http://repo.or.cz/w/tomato.git/shortlog/refs/tags/Teaman-ND-1.28.0018-SDHC
+
+  * cstats/rstats improvement: allow 'grace period' at shutdown (avoid longer timeouts if child processes seem to be really stuck)
+  * miniupnp: Fix infinite loop in SendResp_upnphttp() (from upstream)
+  * EXPERIMENTAL Web UI for multiple virtual/guest WLANs (v1)
+  * MultiSSID: up to 4 WL VIFs per physical interface allowed on WebUI
+
+http://repo.or.cz/w/tomato.git/shortlog/refs/tags/Teaman-ND-1.28.0017-SDHC
+
+  * Static ARP: option to enable all known devices
+  * IPTraffic: K24 ipt_account module updated to v0.1.20
+  * rc/firewall: reorg ipt_account rules creation
+  * IPTraffic: realtime stats gathering fixes - get rid of nested loop for realtime conntrack counting
+
+http://repo.or.cz/w/tomato.git/shortlog/refs/tags/Teaman-ND-1.28.0016-SDHC
+
+  * SDHC/MMC: allow setting mountpoint for sdcard via web UI
+  * cstats/rstats: wait any helper processes complete at service shutdown (helps preventing history/datafile corruption)
+
+http://repo.or.cz/w/tomato.git/shortlog/refs/tags/Teaman-ND-1.28.0015-SDHC
+
+  * Dropbear: config tuneup to reduce size
+  * Allow custom syslog file path + additional log rotate options
+  * Added CPU frequency, chipset type and flash size for K24 builds
+  * Web UI/httpd: improved checking of WL ifaces operational state (up/down)
+
+http://repo.or.cz/w/tomato.git/shortlog/refs/tags/Teaman-ND-1.28.0014-SDHC
+
+  * Option to show hostnames and/or IPs on IPTraffic graphics (improved readability)
+  * VLAN-GUI: include E4200 port mapping
+  * Bugfix for static DHCP lease times (merge from VLAN-GUI)
+  * Included all LAN hostnames/IPs on /etc/hosts (for completeness)
 
 http://repo.or.cz/w/tomato.git/shortlog/refs/tags/Teaman-ND-1.28.0013-SDHC
 
@@ -25,6 +78,7 @@ http://repo.or.cz/w/tomato.git/shortlog/refs/tags/Teaman-ND-1.28.0010-SDHC
 
 
 ------
+
 
 == Changelog (deprecated) ==
 
@@ -60,7 +114,10 @@ Tested partially/only tested on these models:
  * Netgear WNR3500L
 
 
-= Old Version = 
+------
+
+
+= Older Versions = 
 
 Not exactly a 'proper' changelog - but close - this is a raw/partial copy of 'git log' on my local repo:
 
@@ -123,3 +180,4 @@ Author: Augusto Bott <augusto@bott.com.br>
 Date:   Tue May 3 23:13:00 2011 -0300
 
  * First VLAN GUI version. Tested on WRT54GL v1.1 and WRT54G v2
+ 
