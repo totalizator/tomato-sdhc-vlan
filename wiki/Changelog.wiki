@@ -5,14 +5,14 @@
 ------
 
 
-= Changelog = 
+= Changelogs =
 
-http://repo.or.cz/w/tomato.git/shortlog/refs/tags/Teaman-RT-1.28.2019
+== Teaman-ND-SDHC ==
 
-  * For K26 builds and MIPSR2 routers (i.e. E3000)
-  * Same updates as of Teaman-ND-1.28.0019-SDHC
-  * Code merged with Toastman-1.28.7494.1 (http://repo.or.cz/w/tomato.git/shortlog/refs/tags/Toastman-1.28.7494.1)
+http://repo.or.cz/w/tomato.git/shortlog/refs/tags/Teaman-ND-1.28.0020-SDHC
 
+  * dnsmasq: fix DNS/hostname resolution on LAN bridges with DHCP disabled
+  * web UI bugfix: command output was hidden inside the 'Notes' section (Tools/System page)
 
 http://repo.or.cz/w/tomato.git/shortlog/refs/tags/Teaman-ND-1.28.0019-SDHC
 
@@ -80,7 +80,26 @@ http://repo.or.cz/w/tomato.git/shortlog/refs/tags/Teaman-ND-1.28.0010-SDHC
 ------
 
 
-== Changelog (deprecated) ==
+== Teaman-RT ==
+
+
+http://repo.or.cz/w/tomato.git/shortlog/refs/tags/Teaman-RT-1.28.2020
+
+  * Same updates as of http://repo.or.cz/w/tomato.git/shortlog/refs/tags/Teaman-ND-1.28.0020-SDHC
+  * Fix "Previous WAN IP" on Status Overview page
+
+
+http://repo.or.cz/w/tomato.git/shortlog/refs/tags/Teaman-RT-1.28.2019
+
+  * For K26 builds and MIPSR2 routers (i.e. E3000)
+  * Same updates as of http://repo.or.cz/w/tomato.git/shortlog/refs/tags/Teaman-ND-1.28.0019-SDHC
+  * Code merged with Toastman-1.28.7494.1 (http://repo.or.cz/w/tomato.git/shortlog/refs/tags/Toastman-1.28.7494.1)
+
+
+------
+
+
+=== Changelog (deprecated) ===
 
 Here's a short/brief list of features currently implemented/available on branch VLAN-GUI v8 as of today (2011-07-29):
 
@@ -117,7 +136,7 @@ Tested partially/only tested on these models:
 ------
 
 
-= Older Versions = 
+=== Older Versions ===
 
 Not exactly a 'proper' changelog - but close - this is a raw/partial copy of 'git log' on my local repo:
 
@@ -180,4 +199,3 @@ Author: Augusto Bott <augusto@bott.com.br>
 Date:   Tue May 3 23:13:00 2011 -0300
 
  * First VLAN GUI version. Tested on WRT54GL v1.1 and WRT54G v2
- 
