@@ -9,6 +9,11 @@
 
 == Teaman-ND-SDHC ==
 
+http://repo.or.cz/w/tomato.git/shortlog/refs/tags/Teaman-ND-1.28.0021-SDHC
+
+  * MultiSSID bugfix (when saving settings for non-WPAx VIFs, i.e. open or WEP)
+  * IP Traffic: when 'disabled', we now mean 'completely disabled' (i.e. no iptables rules are created, no IPv4 accounting, nada...)
+
 http://repo.or.cz/w/tomato.git/shortlog/refs/tags/Teaman-ND-1.28.0020-SDHC
 
   * dnsmasq: fix DNS/hostname resolution on LAN bridges with DHCP disabled
@@ -81,6 +86,10 @@ http://repo.or.cz/w/tomato.git/shortlog/refs/tags/Teaman-ND-1.28.0010-SDHC
 
 
 == Teaman-RT ==
+
+http://repo.or.cz/w/tomato.git/shortlog/refs/tags/Teaman-RT-1.28.2021
+
+  * Same updates as of http://repo.or.cz/w/tomato.git/shortlog/refs/tags/Teaman-ND-1.28.0021-SDHC
 
 
 http://repo.or.cz/w/tomato.git/shortlog/refs/tags/Teaman-RT-1.28.2020
