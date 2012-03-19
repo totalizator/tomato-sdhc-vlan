@@ -3,8 +3,8 @@
 
 == Acknowledgments == 
 
-  * From Shibby Mod
-  * http://tomato.groov.pl/
+  * From Shibby Mod - http://tomato.groov.pl/
+  * Feature available only on K26/RT builds
 
 == Status/Overview ==
 [http://tomato-sdhc-vlan.googlecode.com/files/Status_Overview_WAN_PPP3G.png]
