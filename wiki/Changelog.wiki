@@ -9,15 +9,33 @@
 
 == Teaman-ND-SDHC ==
 
+http://repo.or.cz/w/tomato.git/shortlog/refs/tags/Teaman-ND-1.28.0023-SDHC
+
+  * NEW FEATURE: PPTP Server for Tomato (experimental)
+  * MultiSSID: fixes saving WL VIF settings when net mode is 'n-only'
+  * rc: fix dhcp options for non-VLAN builds (only pushes default GW on VLAN-GUI-enabled builds)
+  * VLAN-GUI: increased max number of devices/interfaces supported from 16 to 32
+
+
+http://repo.or.cz/w/tomato.git/shortlog/refs/tags/Teaman-ND-1.28.0022-SDHC
+
+  * MultiLAN: restrict LAN Access to IPv4 addresses on firewall rules
+  * VLAN-GUI: fix/load current settings when trunk_vlan_so is enabled (tagging)
+  * MultiLAN: fix WOL when we have more than one LAN bridge (br0-br3) - thanks Shibby!
+  * MultiSSID: visual/usability improvements/fixes when creating new WL VIFs
+
+
 http://repo.or.cz/w/tomato.git/shortlog/refs/tags/Teaman-ND-1.28.0021-SDHC
 
   * MultiSSID bugfix (when saving settings for non-WPAx VIFs, i.e. open or WEP)
   * IP Traffic: when 'disabled', we now mean 'completely disabled' (i.e. no iptables rules are created, no IPv4 accounting, nada...)
 
+
 http://repo.or.cz/w/tomato.git/shortlog/refs/tags/Teaman-ND-1.28.0020-SDHC
 
   * dnsmasq: fix DNS/hostname resolution on LAN bridges with DHCP disabled
   * web UI bugfix: command output was hidden inside the 'Notes' section (Tools/System page)
+
 
 http://repo.or.cz/w/tomato.git/shortlog/refs/tags/Teaman-ND-1.28.0019-SDHC
 
@@ -26,12 +44,14 @@ http://repo.or.cz/w/tomato.git/shortlog/refs/tags/Teaman-ND-1.28.0019-SDHC
   * UDPxy: fixed symlink for udpxrec
   * Add route modem IP option when WAN is set to "Static IP"
 
+
 http://repo.or.cz/w/tomato.git/shortlog/refs/tags/Teaman-ND-1.28.0018-SDHC
 
   * cstats/rstats improvement: allow 'grace period' at shutdown (avoid longer timeouts if child processes seem to be really stuck)
   * miniupnp: Fix infinite loop in SendResp_upnphttp() (from upstream)
   * EXPERIMENTAL Web UI for multiple virtual/guest WLANs (v1)
   * MultiSSID: up to 4 WL VIFs per physical interface allowed on WebUI
+
 
 http://repo.or.cz/w/tomato.git/shortlog/refs/tags/Teaman-ND-1.28.0017-SDHC
 
@@ -40,10 +60,12 @@ http://repo.or.cz/w/tomato.git/shortlog/refs/tags/Teaman-ND-1.28.0017-SDHC
   * rc/firewall: reorg ipt_account rules creation
   * IPTraffic: realtime stats gathering fixes - get rid of nested loop for realtime conntrack counting
 
+
 http://repo.or.cz/w/tomato.git/shortlog/refs/tags/Teaman-ND-1.28.0016-SDHC
 
   * SDHC/MMC: allow setting mountpoint for sdcard via web UI
   * cstats/rstats: wait any helper processes complete at service shutdown (helps preventing history/datafile corruption)
+
 
 http://repo.or.cz/w/tomato.git/shortlog/refs/tags/Teaman-ND-1.28.0015-SDHC
 
@@ -52,6 +74,7 @@ http://repo.or.cz/w/tomato.git/shortlog/refs/tags/Teaman-ND-1.28.0015-SDHC
   * Added CPU frequency, chipset type and flash size for K24 builds
   * Web UI/httpd: improved checking of WL ifaces operational state (up/down)
 
+
 http://repo.or.cz/w/tomato.git/shortlog/refs/tags/Teaman-ND-1.28.0014-SDHC
 
   * Option to show hostnames and/or IPs on IPTraffic graphics (improved readability)
@@ -59,11 +82,13 @@ http://repo.or.cz/w/tomato.git/shortlog/refs/tags/Teaman-ND-1.28.0014-SDHC
   * Bugfix for static DHCP lease times (merge from VLAN-GUI)
   * Included all LAN hostnames/IPs on /etc/hosts (for completeness)
 
+
 http://repo.or.cz/w/tomato.git/shortlog/refs/tags/Teaman-ND-1.28.0013-SDHC
 
   * VLAN-GUI: Added "Route Modem IP" option (from Tomato/MLPPP)
   * VLAN-GUI: Fix compilation error when building without VLAN-GUI enabled
   * IPTraffic: fix sortCompare functions (column sorting)
+
 
 http://repo.or.cz/w/tomato.git/shortlog/refs/tags/Teaman-ND-1.28.0012-SDHC
 
@@ -72,11 +97,13 @@ http://repo.or.cz/w/tomato.git/shortlog/refs/tags/Teaman-ND-1.28.0012-SDHC
   * Dnsmasq 2.59 update
   * dropbear 0.54 update
 
+
 http://repo.or.cz/w/tomato.git/shortlog/refs/tags/Teaman-ND-1.28.0011-SDHC
 
   * Fix default MAC address calculation of virtual WL ifaces
   * Fix handling of DHCP IP ranges for big LAN subnets
   * Added CPU % usage to Status Overview page
+
 
 http://repo.or.cz/w/tomato.git/shortlog/refs/tags/Teaman-ND-1.28.0010-SDHC
   * (...)
@@ -86,6 +113,19 @@ http://repo.or.cz/w/tomato.git/shortlog/refs/tags/Teaman-ND-1.28.0010-SDHC
 
 
 == Teaman-RT ==
+
+http://repo.or.cz/w/tomato.git/shortlog/refs/tags/Teaman-RT-1.28.2023
+
+  * Same updates as of http://repo.or.cz/w/tomato.git/shortlog/refs/tags/Teaman-ND-1.28.0023-SDHC
+  * Updates from Toastman-RT up to http://repo.or.cz/w/tomato.git/shortlog/refs/tags/Toastman-1.28.7496.2 (fix usb_modeswitch/libusb error, improvements on USB detection/old scheme first, QoS fixes)
+
+
+http://repo.or.cz/w/tomato.git/shortlog/refs/tags/Teaman-RT-1.28.2022
+
+  * NEW FEATURE: 3G modem support (from branch tomato-shibby)
+  * Same updates as of http://repo.or.cz/w/tomato.git/shortlog/refs/tags/Teaman-ND-1.28.0022-SDHC
+  * Updates from Toastman-RT up to http://repo.or.cz/w/tomato.git/shortlog/refs/tags/Toastman-1.28.7495.2
+
 
 http://repo.or.cz/w/tomato.git/shortlog/refs/tags/Teaman-RT-1.28.2021
 
@@ -108,7 +148,7 @@ http://repo.or.cz/w/tomato.git/shortlog/refs/tags/Teaman-RT-1.28.2019
 ------
 
 
-=== Changelog (deprecated) ===
+== Changelog (deprecated) ==
 
 Here's a short/brief list of features currently implemented/available on branch VLAN-GUI v8 as of today (2011-07-29):
 
@@ -145,7 +185,7 @@ Tested partially/only tested on these models:
 ------
 
 
-=== Older Versions ===
+== Older Versions ==
 
 Not exactly a 'proper' changelog - but close - this is a raw/partial copy of 'git log' on my local repo:
 
@@ -208,3 +248,4 @@ Author: Augusto Bott <augusto@bott.com.br>
 Date:   Tue May 3 23:13:00 2011 -0300
 
  * First VLAN GUI version. Tested on WRT54GL v1.1 and WRT54G v2
+ 
