@@ -9,6 +9,39 @@
 
 == Teaman-ND-SDHC ==
 
+
+http://repo.or.cz/w/tomato.git/shortlog/refs/tags/Teaman-ND-1.28.0025-SDHC
+
+  * MultiSSID: WPAx fixes - skip WPAx/nas restart (can cause problems with WAN as Wireless Client)
+  * IP Traffic: Fix JS error causing initial load delay when default nvram 'tomato' skin (Moc-RT-N)
+  * Add SNMP configuration options for custom port and remote access (Moc-RT-N)
+  * Add configuration options for the WAN ICMP Rate limiting (Moc-RT-N)
+  * ash: fix execution of shell scripts without shebang (JYAvenard)
+  * Samba security fix - "root" credential remote code execution (Toastman)
+
+
+http://repo.or.cz/w/tomato.git/shortlog/refs/tags/Teaman-ND-1.28.0024-SDHC
+
+  * EXPERIMENTAL VLAN/VID mapping GUI (allows using full range/4k 802.11Q tagging on some models - see Issue #6)
+  * IPTraffic:
+    * change NVRAM defaults to 'disabled'
+    * check/validate minimum size of LAN/subnets only when cstats is enabled
+  * MultiSSID:
+    * check/warn about any BSSID/MAC address discrepancies on WL VIFs (Advanced: Virtual Wireless, advanced-wlanvifs.asp)
+    * fix WL MAC filter to include all WL VIFs (Basic: Wireless Filter, basic-wfilter.asp)
+  * PPTPD:
+    * fix/config dnsmasq to answer DNS queries on pppX interfaces
+    * fix PPTP when used over WAN setup using PPPoE
+    * allow specify 'custom' config/settings on webUI
+  * K24: fix single-line MLPPP (by Shibby - see Issue #20)
+  * robocfg: quick fix for segfaults on K24 builds
+  * firewall: allow DMZ-style forwarding to any LAN bridges (no longer restricted to primary LAN)
+  * VLAN-GUI: include E4200v1 (VLAN 802.1q support confirmed by users - see Issue #9)
+  * webUI/httpd: fix wl_mitigation typo
+  * webUI: fix showing IPv6 info on VLAN-GUI-enabled builds (status-overview.asp)
+  * rc: syslogd custom path improvements (tries to preserve messages at syslogd restart, recreate only if it's a symlink/custom path)
+
+
 http://repo.or.cz/w/tomato.git/shortlog/refs/tags/Teaman-ND-1.28.0023-SDHC
 
   * NEW FEATURE: PPTP Server for Tomato (experimental)
@@ -113,6 +146,21 @@ http://repo.or.cz/w/tomato.git/shortlog/refs/tags/Teaman-ND-1.28.0010-SDHC
 
 
 == Teaman-RT ==
+
+
+http://repo.or.cz/w/tomato.git/shortlog/refs/tags/Teaman-RT-1.28.2025
+
+  * Same updates as of http://repo.or.cz/w/tomato.git/shortlog/refs/tags/Teaman-ND-1.28.0025-SDHC
+
+http://repo.or.cz/w/tomato.git/shortlog/refs/tags/Teaman-RT-1.28.2024
+
+  * Same updates as of http://repo.or.cz/w/tomato.git/shortlog/refs/tags/Teaman-ND-1.28.0024-SDHC
+  * Updates from Toastman-RT up to http://repo.or.cz/w/tomato.git/shortlog/refs/tags/Toastman-1.28.7497.1
+  * PPP3G fixes/enhancements:
+    * allow using WAN port for LAN/br0 with PPP3G as WAN
+    * add more ttyUSBx devices available for selection on basic-network.asp
+    * don't disable USB 3G box when storage checkbox is not checked (by Shibby)
+
 
 http://repo.or.cz/w/tomato.git/shortlog/refs/tags/Teaman-RT-1.28.2023
 
@@ -248,4 +296,3 @@ Author: Augusto Bott <augusto@bott.com.br>
 Date:   Tue May 3 23:13:00 2011 -0300
 
  * First VLAN GUI version. Tested on WRT54GL v1.1 and WRT54G v2
- 
